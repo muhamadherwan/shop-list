@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import Header from './components/Header';
 import ListItem from './components/ListItem';
+import AddItem from './components/AddItem';
 import { v4 as uuidv4 } from 'uuid';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header title='Shop List'/>
+      <AddItem />
       <FlatList 
        data={items}
       renderItem={({item}) => (
